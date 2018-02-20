@@ -1,6 +1,6 @@
 require boxen::environment
 require homebrew
-require gcc
+/* require gcc */
 
 Exec {
   group       => 'staff',
@@ -11,7 +11,7 @@ Exec {
     "${boxen::config::home}/rbenv/shims",
     "${boxen::config::home}/rbenv/bin",
     "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
-    "${boxen::config::home}/homebrew/bin",
+    "${boxen::config::homebrewdir}/bin",
     '/usr/bin',
     '/bin',
     '/usr/sbin',
@@ -64,9 +64,9 @@ node default {
   }
 
   # node versions
-  #include nodejs::v0_6
-  #include nodejs::v0_8
-  #include nodejs::v0_10
+  nodejs::version { '0.8': }
+  nodejs::version { '0.10': }
+  nodejs::version { '0.12': }
 
   # default ruby versions
   ruby::version { '1.9.3': }
@@ -74,6 +74,7 @@ node default {
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
+  ruby::version { '2.4.1': }
 
   # common, useful packages
   package {

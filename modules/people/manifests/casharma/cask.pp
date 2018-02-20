@@ -11,6 +11,7 @@ class people::casharma::cask {
     'hipchat',
     'launchbar',
     'macdown',
+    'mjolnir',
     'mplayer-osx-extended',
     'private-internet-access',
     'screenflow',

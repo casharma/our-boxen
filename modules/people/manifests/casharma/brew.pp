@@ -4,6 +4,7 @@ class people::casharma::brew {
     'wget',
     'gnupg',
     'graphviz',
+    'fondu',
     'fontconfig',
     'fontforge',
     'imagemagick',

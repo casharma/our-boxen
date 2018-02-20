@@ -2,7 +2,7 @@ class people::casharma::preferences {
 
   osx::recovery_message { 'If found, please contact Carthik Sharma - mail@carthik.net - 407 421 3062': }
   include osx::dock::dim_hidden_apps
-  include osx::dock::autohide
+  #include osx::dock::autohide
   include osx::dock::hot_corners
   include osx::dock::icon_size
   include osx::dock::position
